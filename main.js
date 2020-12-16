@@ -8,40 +8,32 @@ Quando l'utente inserisce una task ha due modi per salvarla: o preme il pulsante
 Attenzione: l'utente non deve inserire tasks vuote ma almeno un tot di caratteri.
  */
 
- let app = new Vue({
+let app = new Vue({
     el:"#app",
     data:{
         inputs: [],
     },
     methods:{
     
-        // inserisco nuove tasks
+        // inserisco nuove task
         add(){
-            text = document.querySelector('input').value;
+           var text = document.querySelector('input').value;
+        // impedisco all'utente di inserire qualcosa con meno di 3 caratteri.
             if(text.length <= 3){
                 alert("invalid selection");
-            } else {
+            }
+        // se invece, la stringa ha piu' di 3 caratteri la pusho nell'array.
+            else{
                 this.inputs.push ({value : text});
+        // dopo aver pushato, elimino il campo dell'input in modo da poter inserire nuovamente una Task.
+                document.querySelector('input').value ='';
             }
         },
+        
         // remove tasks
         remove(index){
             this.inputs.splice (index, 1)
         },
-        },
-
-
-
-
-        // se il contanier delle tasks è vuoto, comparirà un alert
-        // noTask : function(){
-        //     let containerTask = document.getElementById("newTask");
-
-        //     if (containerTask == null){
-        //         alert("No tasks today");
-        //     }
-        //}
-
-
-
+    },
+    
 });
