@@ -27,6 +27,7 @@
                 <h3>To do List</h3>
                 <div id="newTasks"  v-for="(input, index) in inputs">
                     <input type="text" v-model="input.value" :key="index">
+                    <button @click="remove(index)">Remove</button>
                 </div>
 
 

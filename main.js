@@ -19,6 +19,10 @@ Attenzione: l'utente non deve inserire tasks vuote ma almeno un tot di caratteri
         add(){
             text = document.querySelector('input').value;
             this.inputs.push ({value : text});
+        },
+        // remove tasks
+        remove(index){
+            this.inputs.splice (index, 1)
         }
     }
 
