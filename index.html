@@ -10,6 +10,8 @@
         <!-- LInk font google -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <!-- Link font awsome -->
+        <script src=https://kit.fontawesome.com/fc3e9057b4.js crossorigin=anonymous></script>
         <title>Document</title>
     </head>
         <body>
@@ -21,15 +23,18 @@
                 <div id="info-wrapper">
                     <input class="typeIn" type="text" @keyup.enter="add"  value="">
                     <button @click="add" >Add</button>
+                    <h3>Todo List</h3>
                 </div>
-                <h3>To do List</h3>
                 <div v-if="show">
-                    <div>  YOU DON'T HAVE TASK </div>
+                    <div class="noTasksInput">  YOU DON'T HAVE TASKs </div>
                 </div>
-                <div v-else id="newTasks" v-for="(input, index) in inputs">
-                    <input type="text" v-model="input.value" :key="index">
-                    <button @click="remove(index)">Remove</button>
+                <div v-else id="taskWrapper">
+                    <div  id="newTasks" v-for="(input, index) in inputs" >
+                        <input class="tasksInput" type="text" v-model="input.value" :key="index">
+                        <i class="fas fa-times-circle circleRemove fall" @click="remove(index)"></i>    
                 </div>
+                </div>                
+                
                 
             </div>
             

@@ -14,6 +14,18 @@ body {
     flex-flow: column;
 }
 
+#app h3 {
+    text-align: left;
+    padding: 0 5px;
+    font-size: 25px;
+    color: #001533;
+}
+
+.noTasksInput {
+    padding-left: 5px;
+    color: #001533;
+}
+
 img {
     margin: 20px;
     height: 50px;
@@ -24,7 +36,7 @@ img {
 }
 
 #info-wrapper input {
-    border-style: none;
+    border-style: hidden;
     border-radius: 10px;
     padding: 10px;
 }
@@ -34,4 +46,50 @@ img {
     border-radius: 10px;
     padding: 10px 15px;
     cursor: pointer;
+    background-color: #22e166;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#info-wrapper button:focus {
+    outline: none;
+    color: #001533;
+}
+
+#taskWrapper {
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+#newTasks {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+i.circleRemove {
+    width: 20%;
+    text-align: right;
+    cursor: pointer;
+}
+
+#newTasks input {
+    width: 50%;
+    border-style: none;
+    background-color: transparent;
+    color: black;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.typeIn:focus {
+    outline: none;
+    border-style: 2px solid #22e166;
+    background-color: #001533;
+    color: white;
 }
