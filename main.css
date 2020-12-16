@@ -77,7 +77,7 @@ i.circleRemove {
 }
 
 #newTasks input {
-    width: 50%;
+    width: 80%;
     border-style: none;
     background-color: transparent;
     color: black;
@@ -85,6 +85,10 @@ i.circleRemove {
     text-transform: uppercase;
     font-weight: bold;
 
+}
+
+#newTasks input:focus {
+    outline: none;
 }
 
 
