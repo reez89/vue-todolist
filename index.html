@@ -14,16 +14,29 @@
         <title>Document</title>
     </head>
         <body>
+
             <div id="app">
+
                 <div class="boolean-logo">
                     <img src="https://www.boolean.careers/images/misc/logo.png" alt="">
                 </div>
                 <div id="info-wrapper">
-                    <input type="text">
-                    <button>Add</button>
+                    <input class="typeIn" type="text" value="" >
+                    <button @click="add">Add</button>
                 </div>
                 <h3>To do List</h3>
-                <input type="text">
+                <div id="newTasks"  v-for="(input, index) in inputs">
+                    <input type="text" v-model="input.value" :key="index">
+                </div>
+
+
+
+
+
+
+
+
+
 
             </div>
             
