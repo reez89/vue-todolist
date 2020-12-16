@@ -18,7 +18,11 @@ Attenzione: l'utente non deve inserire tasks vuote ma almeno un tot di caratteri
         // inserisco nuove tasks
         add(){
             text = document.querySelector('input').value;
-            this.inputs.push ({value : text});
+            if(text.length <= 3){
+                alert("invalid selection");
+            } else {
+                this.inputs.push ({value : text});
+            }
         },
         // remove tasks
         remove(index){
