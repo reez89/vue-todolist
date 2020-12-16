@@ -11,6 +11,7 @@ Attenzione: l'utente non deve inserire tasks vuote ma almeno un tot di caratteri
 let app = new Vue({
     el:"#app",
     data:{
+        show: true,
         inputs: [],
     },
     methods:{
@@ -25,6 +26,7 @@ let app = new Vue({
         // se invece, la stringa ha piu' di 3 caratteri la pusho nell'array.
             else{
                 this.inputs.push ({value : text});
+                this.show = false;
         // dopo aver pushato, elimino il campo dell'input in modo da poter inserire nuovamente una Task.
                 document.querySelector('input').value ='';
             }
@@ -33,7 +35,11 @@ let app = new Vue({
         // remove tasks
         remove(index){
             this.inputs.splice (index, 1)
+            if (this.inputs.length === 0){
+            this.show = true;
+        }
         },
-    },
+    }
+
     
 });
