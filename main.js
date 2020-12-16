@@ -13,12 +13,8 @@ Attenzione: l'utente non deve inserire tasks vuote ma almeno un tot di caratteri
     data:{
         inputs: [],
     },
-    mounted() {
-        this.noTask();
-        
-    },
     methods:{
-        
+    
         // inserisco nuove tasks
         add(){
             text = document.querySelector('input').value;
@@ -28,34 +24,20 @@ Attenzione: l'utente non deve inserire tasks vuote ma almeno un tot di caratteri
         remove(index){
             this.inputs.splice (index, 1)
         },
-        noTask : function(){
-            let containerTask = document.getElementById("newTask");
-
-            if (containerTask == null){
-                alert("No task today");
-            }
-        }
-    }
+        },
 
 
 
 
+        // se il contanier delle tasks è vuoto, comparirà un alert
+        // noTask : function(){
+        //     let containerTask = document.getElementById("newTask");
+
+        //     if (containerTask == null){
+        //         alert("No tasks today");
+        //     }
+        //}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- });
+});
