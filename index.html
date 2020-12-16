@@ -26,12 +26,12 @@
                     <h3>Todo List</h3>
                 </div>
                 <div v-if="show">
-                    <div class="noTasksInput">  YOU DON'T HAVE TASKs </div>
+                    <div class="noTasksInput">  Seriously ?! </div>
                 </div>
                 <div v-else id="taskWrapper">
                     <div  id="newTasks" v-for="(input, index) in inputs" >
                         <input class="tasksInput" type="text" v-model="input.value" :key="index">
-                        <i class="fas fa-times-circle circleRemove fall" @click="remove(index)"></i>    
+                        <i class="fas fa-times-circle circleRemove" @click="remove(index)"></i>    
                 </div>
                 </div>                
                 
