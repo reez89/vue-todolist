@@ -43,6 +43,7 @@
                         <i class="fas fa-pencil-alt modify" @click="modify(index)"></i>
                     </div>
                 </div>
+                <!-- Qui verranno inserite le Tasks completate -->
                 <div id="toDoList">
                     <h3>Task completed</h3>
                     <i class="fas fa-trash trash-bin" @click="removeCompleted"></i>
@@ -51,6 +52,7 @@
                     <input  type="text" v-model="complete.value" :key="index" disabled="disabled">
                     <i class="fas fa-arrow-up arrow" @click="back(index)"></i>
                 </div>
+                <!-- Qui verranno inserite le Tasks eliminate dall'utente -->
                 <div id="toDoList">
                     <h3>TRASH</h3>
                     <i class="fas fa-trash trash-bin" @click="removeTrash"></i>
