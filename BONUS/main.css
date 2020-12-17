@@ -66,7 +66,7 @@ img {
 }
 
 i.circleRemove {
-    width: 20%;
+    padding: 0 2px;
     text-align: right;
     cursor: pointer;
 }
@@ -79,10 +79,20 @@ i.checked {
     cursor: pointer;
 }
 
+#toDoList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+i.trash-bin {
+    cursor: pointer;
+}
+
 .completed {
     background-color: darkgray;
     text-decoration: line-through;
-    transition: all 0.5s ease;
+    transition: all 5s ease;
 }
 
 #newTasks input {
@@ -93,6 +103,7 @@ i.checked {
     background-color: transparent;
     text-transform: uppercase;
     font-weight: bold;
+    transition: all 5s ease;
 
 }
 

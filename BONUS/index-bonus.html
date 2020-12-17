@@ -25,7 +25,10 @@
                 <div id="info-wrapper">
                     <input class="typeIn" type="text" @keyup.enter="add"  value="">
                     <button @click="add" >Add</button>
-                    <h3>Todo List</h3>
+                    <div id="toDoList">
+                        <h3>Todo List</h3>
+                        <i class="fas fa-trash trash-bin" @click="removeAll"></i>
+                    </div>
                 </div>
                 <!-- Se non ci sono Tasks comparirà questo messaggio -->
                 <div v-if="show">
@@ -33,9 +36,9 @@
                 </div>
                 <!-- Le nuove Tasks verranno inserite dinamicamente qui sotto -->
                 <div v-else id="taskWrapper">
-                    <div  id="newTasks" v-for="(input, index) in inputs" >
+                    <div id="newTasks" v-for="(input, index) in inputs" >
                         <input id="modifier" class="tasksInput" type="text" v-model="input.value" :key="index" disabled="disabled">
-                        <i class="fas fa-check checked" @click="taskCompleted"></i>
+                        <i class="fas fa-check checked" @click="taskCompleted(index)"></i>
                         <i class="fas fa-times-circle circleRemove" @click="remove(index)"></i>
                         <i class="fas fa-pencil-alt modify" @click="modify"></i>
                 </div>

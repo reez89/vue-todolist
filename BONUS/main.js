@@ -46,13 +46,17 @@ let app = new Vue({
             }
         },
         // task completata
-        taskCompleted(){
+        taskCompleted(index){
             let inputs = document.getElementsByClassName('tasksInput');
             for(let i = 0; i < inputs.length; i++){
-                inputs[i].classList.add("completed");
+                inputs[index].classList.add("completed");
             }
+        },
+        // premendo il cestino, tutte le task vengono elminate.
+        removeAll(){
+            this.inputs.splice (this.inputs)
+            this.show = true;
         }
     }
 
-    
 });
