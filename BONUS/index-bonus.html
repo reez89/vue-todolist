@@ -41,13 +41,15 @@
                         <i class="fas fa-check checked" @click="taskCompleted(index)"></i>
                         <i class="fas fa-times-circle circleRemove" @click="remove(index)"></i>
                         <i class="fas fa-pencil-alt modify" @click="modify(index)"></i>
+                    </div>
                 </div>
-                <div class="task-completed">
-                    
+                <div id="toDoList">
+                    <h3>Task completed</h3>
+                    <i class="fas fa-trash trash-bin" @click="removeCompleted"></i>
+                </div>               
+                <div class="task-completed" v-for="(complete, index) in inputsCompleted" >
+                    <input id="modifier" type="text" v-model="complete.value" :key="index">
                 </div>
-
-
-                </div>                
                 
                 
             </div>
