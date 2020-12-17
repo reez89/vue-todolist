@@ -2,9 +2,9 @@
 * L'utente vuole poter modificare una task giá inserita  ---ok
 * ma vuole anche poter indicare che la task é stata completata ---ok
 * inoltre se una task é stata completa allora vuole che venga inserita in un'altra colonna tipo "tasks completate" --- ok
-* ah non é finita, dice che quando cancella una task, non vuole che questa venga subito rimossa, ma vuole che resti visibile e venga spostata in una colonna tipo "cestino"
-* si, l'utente é un ropi scatole, dice infine che vuole poter rimuovere tutte le tasks nel cestino cliccando su un pulsante tipo "svuota cestino"
-Il nostro utente per ora sembra non avere altre richieste... ma chissá se dopo gli viene in mente che vuole anche poter rimettere una task cancellata nella lista di tasks da fare, magari l'ha  cancellata per sbaglio... */
+* ah non é finita, dice che quando cancella una task, non vuole che questa venga subito rimossa, ma vuole che resti visibile e venga spostata in una colonna tipo "cestino" --- ok
+* si, l'utente é un ropi scatole, dice infine che vuole poter rimuovere tutte le tasks nel cestino cliccando su un pulsante tipo "svuota cestino" --- ok
+* Il nostro utente per ora sembra non avere altre richieste... ma chissá se dopo gli viene in mente che vuole anche poter rimettere una task cancellata nella lista di tasks da fare, magari l'ha  cancellata per sbaglio... */
 
 let app = new Vue({
     el:"#app",
@@ -76,8 +76,12 @@ let app = new Vue({
         // premendo il cestino rimuovo tutte le task eliminate.
         removeTrash(){
             this.trashHolder.splice (this.trashHolder)
+        },
+        // premendo sulla freccia, riporto la task in quelle da fare.
+        back(index){
+            this.inputs.push(this.inputsCompleted[index]);
+            this.inputsCompleted.splice(index,1);
         }
-
     },
 
 });

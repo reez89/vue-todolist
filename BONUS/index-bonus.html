@@ -48,14 +48,15 @@
                     <i class="fas fa-trash trash-bin" @click="removeCompleted"></i>
                 </div>               
                 <div class="task-completed" v-for="(complete, index) in inputsCompleted" >
-                    <input id="modifier" type="text" v-model="complete.value" :key="index" disabled="disabled">
+                    <input  type="text" v-model="complete.value" :key="index" disabled="disabled">
+                    <i class="fas fa-arrow-up arrow" @click="back(index)"></i>
                 </div>
                 <div id="toDoList">
                     <h3>TRASH</h3>
                     <i class="fas fa-trash trash-bin" @click="removeTrash"></i>
                 </div>               
                 <div class="trash-bin" v-for="(trash, index) in trashHolder" >
-                    <input id="modifier" type="text" v-model="trash.value" :key="index">
+                    <input type="text" v-model="trash.value" :key="index">
                 </div>
                 
                 

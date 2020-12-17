@@ -52,7 +52,9 @@ img {
     color: #001533;
 }
 
-#taskWrapper {
+#taskWrapper,
+.task-completed,
+.trash-bin {
     background-color: lightgray;
     border-radius: 10px;
 }
@@ -75,7 +77,8 @@ i.modify {
     cursor: pointer;
 }
 
-i.checked {
+i.checked,
+i.arrow {
     cursor: pointer;
 }
 
@@ -95,7 +98,9 @@ i.trash-bin {
     transition: all 5s ease;
 }
 
-#newTasks input {
+#newTasks input,
+.trash-bin input,
+.task-completed input {
     width: 80%;
     border-style: none;
     background-color: transparent;
