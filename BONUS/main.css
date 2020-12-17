@@ -36,7 +36,6 @@ img {
 }
 
 
-
 #info-wrapper button {
     border-style: none;
     border-radius: 10px;
@@ -72,7 +71,11 @@ i.circleRemove {
     cursor: pointer;
 }
 
-#newTasks>input {
+i.modify {
+    cursor: pointer;
+}
+
+#newTasks input {
     width: 80%;
     border-style: none;
     background-color: transparent;
@@ -82,6 +85,7 @@ i.circleRemove {
     font-weight: bold;
 
 }
+
 
 #info-wrapper>input {
     border: white;

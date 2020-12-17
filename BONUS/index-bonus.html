@@ -34,8 +34,9 @@
                 <!-- Le nuove Tasks verranno inserite dinamicamente qui sotto -->
                 <div v-else id="taskWrapper">
                     <div  id="newTasks" v-for="(input, index) in inputs" >
-                        <input class="tasksInput" type="text" v-model="input.value" :key="index" disabled="disabled">
-                        <i class="fas fa-times-circle circleRemove" @click="remove(index)"></i>    
+                        <input id="modifier" class="tasksInput" type="text" v-model="input.value" :key="index" disabled="disabled">
+                        <i class="fas fa-times-circle circleRemove" @click="remove(index)"></i>
+                        <i class="fas fa-pencil-alt modify" @click="modify"></i>
                 </div>
 
                 </div>                
