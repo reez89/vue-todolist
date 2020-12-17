@@ -40,9 +40,16 @@ let app = new Vue({
 
         // modify tasks
         modify(){
-            var inputs = document.getElementsByClassName('tasksInput');
-            for(var i = 0; i < inputs.length; i++) {
+            let inputs = document.getElementsByClassName('tasksInput');
+            for(let i = 0; i < inputs.length; i++) {
             inputs[i].disabled = false;
+            }
+        },
+        // task completata
+        taskCompleted(){
+            let inputs = document.getElementsByClassName('tasksInput');
+            for(let i = 0; i < inputs.length; i++){
+                inputs[i].classList.add("completed");
             }
         }
     }

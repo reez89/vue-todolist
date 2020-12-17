@@ -75,6 +75,16 @@ i.modify {
     cursor: pointer;
 }
 
+i.checked {
+    cursor: pointer;
+}
+
+.completed {
+    background-color: darkgray;
+    text-decoration: line-through;
+    transition: all 0.5s ease;
+}
+
 #newTasks input {
     width: 80%;
     border-style: none;
