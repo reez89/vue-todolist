@@ -39,10 +39,10 @@ let app = new Vue({
         },
 
         // modify tasks
-        modify(){
+        modify(index){
             let inputs = document.getElementsByClassName('tasksInput');
             for(let i = 0; i < inputs.length; i++) {
-            inputs[i].disabled = false;
+            inputs[index].disabled = false;
             }
         },
         // task completata
